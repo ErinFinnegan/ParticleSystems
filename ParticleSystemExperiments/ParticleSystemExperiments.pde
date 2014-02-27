@@ -12,17 +12,18 @@ void setup() {
   dogeimg = loadImage("dogenowords2.jpg");
   //  font = loadFont("ComicSansMS-Bold-40.vlw");
 
-  ps = new ParticleSystem(0, new PVector(width/2, 50));
+  ds = new ParticleSystem(0, new PVector((width/2 - 70), (height/2 - 50)));
 }
 
 void draw() {
-  background(255);
-  image(dogeimg, 0, 0);
-  //image(dogecoin, width/2, height/2);
+  background(0);
+  image(dogeimg, width/2, height/2);
 
+pushMatrix();
   ds.run();
   for (int i = 0; i < 10; i++) {
-    ps.addParticle();
+    ds.addParticle();
   }
+popMatrix();
 }
 

@@ -4,9 +4,8 @@ class Particle {
   PVector acc;
   float lifespan;
 
-  // Another constructor (the one we are using here)
   Particle(PVector l) {
-    // Boring example with constant acceleration
+    // Boring example with constant acceleration  //I don't think it's boring
     acc = new PVector(0, 0.05, 0);
     vel = new PVector(random(-1, 1), random(-1, 0), 0);
     vel.mult(2);
@@ -23,13 +22,13 @@ class Particle {
   void update() {
     vel.add(acc);
     loc.add(vel);
-    lifespan -= 2.0;
+    lifespan -= 0.5;
   }
 
   // Method to display
   void render() {
     imageMode(CENTER);
-    tint(lifespan);
+    tint(255);
     image(dogecoin, loc.x, loc.y);
   }
 
