@@ -4,33 +4,44 @@ ParticleSystem ds;
 
 PImage dogeimg;
 PImage dogecoin;
+PFont font;
 
+ArrayList<ParticleSystem> systems;
 
 void setup() {
   size(1000, 750, P2D);
 
+  systems = new ArrayList<ParticleSystem>();
+
   dogecoin = loadImage("dogecoin.png");
   dogeimg = loadImage("dogenowords2.jpg");
-  //  font = loadFont("ComicSansMS-Bold-40.vlw");
+
   ds = new ParticleSystem(0, new PVector(0, 0));  //the second Pvector is where the location is set
+  font = loadFont("ComicSansMS-Bold-40.vlw");
 }
 
 void draw() {
 
-  blendMode(MULTIPLY);
-  //background(255);
-  //pushMatrix();  //THE GOGGLES THEY DO NOTHING
-  image(dogeimg, width/2, height/2);
-  //popMatrix();  //NOTHING!!!
+ // blendMode(ADD);
+ //  background(75);
 
 
-  ds.run();
-  for (int i = 0; i < 2; i++) {
+  for (ParticleSystem ds: systems) {
+    ds.run();
     ds.addParticle();
   }
+
+  image(dogeimg, 0, 0);
+
+  pushMatrix();  //THE GOGGLES THEY DO NOTHING
+  fill(0);
+  textFont(font, 32);
+  text("click mouse to add particle systems", 10, height-30);
+  popMatrix();  //NOTHING!!!
 }
 
-void mouseClicked() {
-  ds = new ParticleSystem(0, new PVector(mouseX, mouseY));  //the second Pvector is where the location is set
+
+void mousePressed() {
+  systems.add(new ParticleSystem(1, new PVector(mouseX, mouseY)));
 }
 
