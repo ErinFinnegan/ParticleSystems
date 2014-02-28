@@ -16,14 +16,18 @@ void setup() {
 }
 
 void draw() {
-  image(dogeimg, width/2, height/2);
 
-  //  pushMatrix();
+  blendMode(MULTIPLY);
+  //background(255);
+  //pushMatrix();  //THE GOGGLES THEY DO NOTHING
+  image(dogeimg, width/2, height/2);
+  //popMatrix();  //NOTHING!!!
+
+
   ds.run();
   for (int i = 0; i < 2; i++) {
     ds.addParticle();
   }
-  //  popMatrix();
 }
 
 void mouseClicked() {
