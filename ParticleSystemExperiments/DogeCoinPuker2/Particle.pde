@@ -1,3 +1,5 @@
+//based heavily on Nature of Code example 4_09_Additive Blending by Daniel Shiffman, natureofcode.com
+
 class Particle {
   PVector loc;
   PVector vel;
@@ -22,13 +24,14 @@ class Particle {
   void update() {
     vel.add(acc);
     loc.add(vel);
-    lifespan -= 0.5;
+    lifespan -= 0.01;  //0.5 is really long, higher numbers are shorter
   }
 
   // Method to display
   void render() {
     imageMode(CENTER);
-    tint(255, 255, 255, lifespan); 
+    //tint(255, 255, 255, lifespan); 
+    //tint(255, lifespan); 
     image(dogecoin, loc.x, loc.y);
   }
 
