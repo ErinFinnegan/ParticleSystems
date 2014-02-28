@@ -22,16 +22,16 @@ void setup() {
 
 void draw() {
 
- // blendMode(ADD);
- //  background(75);
+  // blendMode(ADD);  //Other modes SUBTRACT, LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION,or MULTIPLY.
+  //  background(75);
 
 
   for (ParticleSystem ds: systems) {
     ds.run();
     ds.addParticle();
   }
-
-  image(dogeimg, 0, 0);
+  imageMode(CENTER);
+  image(dogeimg, width/2, height/2);
 
   pushMatrix();  //THE GOGGLES THEY DO NOTHING
   fill(0);
