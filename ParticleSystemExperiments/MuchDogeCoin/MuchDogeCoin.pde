@@ -16,15 +16,15 @@ void setup() {
 }
 
 void draw() {
-  background(0);
+ // background(0);
   image(dogeimg, width/2, height/2);
 
-  //  pushMatrix();
+  //pushMatrix();
   ds.run();
   for (int i = 0; i < 10; i++) {
     ds.addParticle();
   }
-  //  popMatrix();
+ // popMatrix();
 }
 
 void mouseClicked() {

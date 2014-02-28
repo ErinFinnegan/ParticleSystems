@@ -10,7 +10,7 @@ class Particle {
     vel = new PVector(random(-1, 1), random(-1, 0), 0);
     vel.mult(2);
     loc = l.get();
-    lifespan = 255;
+    lifespan = 65;  //under 50 is too low, 255 is kinda too high
   }
 
   void run() {
@@ -28,7 +28,7 @@ class Particle {
   // Method to display
   void render() {
     imageMode(CENTER);
-    tint(255);
+    tint(255, 255, 255, lifespan);   //tint can be (rgb), (rgb, alpha), (gray), (gray, alpha)
     image(dogecoin, loc.x, loc.y);
   }
 
