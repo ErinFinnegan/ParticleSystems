@@ -26,7 +26,13 @@ class ParticleSystem {
   }
 
   void addParticle() {
-    particles.add(new Particle(origin));
+    float r = random(1);
+    if (r < 0.5) { 
+      particles.add(new Particle(origin));
+    } 
+    else {
+      particles.add(new Sparkle(origin));
+    }
   }
 
   void addParticle(Particle p) {
