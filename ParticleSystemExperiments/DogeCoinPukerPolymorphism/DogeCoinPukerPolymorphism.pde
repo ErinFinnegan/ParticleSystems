@@ -16,7 +16,7 @@ void setup() {
 
   dogecoin = loadImage("dogecoin.png");
   dogeimg = loadImage("dogenowords2.jpg");
-    sparkle = loadImage("sparkles.png");
+  sparkle = loadImage("sparkles.png");
 
   ds = new ParticleSystem(0, new PVector(0, 0));  //the second Pvector is where the location is set
   font = loadFont("ComicSansMS-Bold-40.vlw");

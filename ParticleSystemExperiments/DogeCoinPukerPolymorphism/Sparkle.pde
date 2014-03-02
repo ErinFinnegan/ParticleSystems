@@ -14,7 +14,7 @@ class Sparkle extends Particle {
   // Override the display method
   void render() {
     imageMode(CENTER);
-    tint(255, 255, 255, lifespan); 
+   // tint(255, 255, 255, lifespan); 
     //tint(255, lifespan); 
     //tint(lifespan);
     image(sparkle, loc.x, loc.y);
