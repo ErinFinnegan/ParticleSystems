@@ -21,7 +21,7 @@ void setup() {
 
   ds = new ParticleSystem(0, new PVector(0, 0));  //the second Pvector is where the location is set
   font = loadFont("ComicSansMS-Bold-40.vlw");
-//  rgb = (ArrayOfColors[(int) random(ArrayOfColors.length)]);
+  //  rgb = (ArrayOfColors[(int) random(ArrayOfColors.length)]);
 }
 
 void draw() {
@@ -47,6 +47,6 @@ void draw() {
 
 void mousePressed() {
   systems.add(new ParticleSystem(1, new PVector(mouseX, mouseY)));
-  //  rgb = (ArrayOfColors[(int) random(ArrayOfColors.length)]);
+  textFont(font, random(6, 45));
 }
 

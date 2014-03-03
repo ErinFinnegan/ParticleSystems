@@ -26,6 +26,7 @@ class Particle {
     vel.mult(2);
     loc = l.get();
     lifespan = 60;  //under 50 is too low, 255 is kinda too high
+
   }
 
   void run() {
