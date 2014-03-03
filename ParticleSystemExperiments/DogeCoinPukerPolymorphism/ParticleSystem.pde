@@ -27,10 +27,14 @@ class ParticleSystem {
 
   void addParticle() {
     float r = random(1);
-    if (r < 0.5) { 
+    if (r <= 0.3) { 
       particles.add(new Particle(origin));
     } 
-    else {
+    else if (r <= 0.6 && r >0.3 ) {
+      particles.add(new Words(origin));
+    }
+    else
+    {
       particles.add(new Sparkle(origin));
     }
   }

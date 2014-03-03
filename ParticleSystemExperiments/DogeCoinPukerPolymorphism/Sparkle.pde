@@ -14,16 +14,12 @@ class Sparkle extends Particle {
   // Override the display method
   void render() {
     imageMode(CENTER);
-   // tint(255, 255, 255, lifespan); 
+    tint(255, 255, 255, lifespan); 
     //tint(255, lifespan); 
     //tint(lifespan);
-    image(sparkle, loc.x, loc.y);
-    pushMatrix();
-    translate(loc.x,loc.y);
-    float theta = map(loc.x,0,width,0,TWO_PI*2);
-    rotate(theta);
-    rect(0,0,12,12);
-    popMatrix();
+
+   image(sparkle, loc.x, loc.y);
+  
   }
 }
 

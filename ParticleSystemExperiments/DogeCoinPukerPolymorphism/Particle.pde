@@ -29,6 +29,10 @@ class Particle {
 
   // Method to display
   void render() {
+    
+    
+    
+    
     imageMode(CENTER);
     tint(255, 255, 255, lifespan); 
     //tint(255, lifespan); 

@@ -25,7 +25,7 @@ void setup() {
 void draw() {
 
   // blendMode(ADD);  //Other modes SUBTRACT, LIGHTEST, DARKEST, DIFFERENCE, EXCLUSION,or MULTIPLY.
-  //  background(75);
+  //background(255);
 
 
   for (ParticleSystem ds: systems) {
@@ -35,11 +35,11 @@ void draw() {
   imageMode(CENTER);
   image(dogeimg, width/2, height/2);
 
-  pushMatrix();  //THE GOGGLES THEY DO NOTHING
+//  pushMatrix();  //THE GOGGLES THEY DO NOTHING
   fill(0);
   textFont(font, 32);
   text("click mouse to add particle systems", 10, height-30);
-  popMatrix();  //NOTHING!!!
+//  popMatrix();  //NOTHING!!!
 }
 
 
