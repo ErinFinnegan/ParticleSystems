@@ -6,6 +6,19 @@ class Particle {
   PVector acc;
   float lifespan;
 
+  String[] words = { 
+    "wow", "much processing", "very Java", "much codee", "very scare", "PVectro", "much force", "frictoin", 
+    "wow", "very Newton", "much law",
+  };
+
+  int index = int(random(words.length)); 
+
+  color[] ArrayOfColors = { 
+    color(181, 230, 29), color(63, 72, 204), color(255, 174, 201), color(0, 162, 232), color(255, 127, 39), color(255, 242, 0), color(136, 0, 21), color(212, 176, 190), color(207, 209, 100), color(200, 120, 87)
+  };
+  color rgb = (ArrayOfColors[(int) random(ArrayOfColors.length)]);  //add psychedelic color spray
+
+
   Particle(PVector l) {
     // Boring example with constant acceleration  //I don't think it's boring
     acc = new PVector(0, 0.05, 0);
@@ -29,10 +42,10 @@ class Particle {
 
   // Method to display
   void render() {
-    
-    
-    
-    
+
+
+
+
     imageMode(CENTER);
     tint(255, 255, 255, lifespan); 
     //tint(255, lifespan); 
